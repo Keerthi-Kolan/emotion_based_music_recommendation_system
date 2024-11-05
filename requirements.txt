@@ -1,4 +1,4 @@
 opencv-python
 deepface
 numpy
-libgl1-mesa-glx
+
