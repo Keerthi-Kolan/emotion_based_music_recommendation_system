@@ -22,6 +22,7 @@ capture_duration = 4  # Duration in seconds to capture emotions
 
 # Open the webcam
 cap = cv2.VideoCapture(0)
+cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
 if not cap.isOpened():
     st.error("Cannot open webcam")
     st.stop()
@@ -59,7 +60,7 @@ def capture_emotions():
 
         # Display frame and emotion in Streamlit
         frame_placeholder.image(frame_rgb, channels="RGB", width=640)
-        emotion_placeholder.text(f"Current Emotion: {emotion}")
+        #emotion_placeholder.text(f"Current Emotion: {emotion}")
 
     # Determine the dominant emotion after capture duration
     capture_status.empty()  # Clear the capturing message
