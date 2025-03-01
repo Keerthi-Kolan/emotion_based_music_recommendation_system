@@ -4,3 +4,4 @@ deepface
 matplotlib
 tf-keras
 setuptools
+streamlit
